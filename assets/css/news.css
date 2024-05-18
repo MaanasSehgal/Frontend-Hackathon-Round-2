@@ -1,6 +1,10 @@
 .news-container {
-    margin-top: 10rem;
-    padding: 20px;
+    /* margin-top: 10rem; */
+
+    /* padding: 20px; */
+    
+    width: 100%;
+    height: 100%;
 }
 
 .years {
@@ -10,6 +14,11 @@
     display: flex;
     justify-content: center;
 }
+
+/* #scroll-container {
+    height: 100%;
+    width: 100%;
+} */
 
 .years li {
     margin-right: 10px;

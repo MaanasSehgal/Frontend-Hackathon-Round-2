@@ -2,7 +2,7 @@
     margin-bottom: 20px;
 }
 
-#main {
+#scroll-container {
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -10,6 +10,7 @@
 }
 
 .message {
+    margin-top: 8rem;
     width: 69%;
     margin-bottom: 20px;
     line-height: 1.5;

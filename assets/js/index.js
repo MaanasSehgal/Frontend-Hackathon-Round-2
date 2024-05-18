@@ -590,21 +590,105 @@ function getNewsDataForYear(year) {
     return newsData[year] || [];
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger);
+// document.addEventListener("DOMContentLoaded", function () {
+//     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.utils.toArray(".page").forEach((page) => {
-        gsap.from(page, {
-            scrollTrigger: {
-                trigger: page,
-                start: "top 80%",
-                end: "bottom 60%",
-                toggleActions: "play none none reverse",
-            },
-            duration: 1,
-            opacity: 0,
-            y: 50,
-            ease: "power3.out",
+//     gsap.utils.toArray(".page").forEach((page) => {
+//         gsap.from(page, {
+//             scrollTrigger: {
+//                 trigger: page,
+//                 start: "top 80%",
+//                 end: "bottom 60%",
+//                 toggleActions: "play none none reverse",
+//             },
+//             duration: 1,
+//             opacity: 0,
+//             y: 50,
+//             ease: "power3.out",
+//         });
+//     });
+// }); gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".category", {
+    opacity: 0,
+    y: 50,
+    duration: 0.5,
+    scrollTrigger: {
+        trigger: ".category",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+        once: true,
+    },
+});
+
+gsap.from(".styled-link", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.3,
+    scrollTrigger: {
+        trigger: ".links",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+        once: true,
+    },
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollContainer = document.querySelector("[data-barba='container']");
+    const locoScroll = new LocomotiveScroll({
+        el: scrollContainer,
+        smooth: true,
+    });
+
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy(scrollContainer, {
+        scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+        },
+        pinType: scrollContainer.style.transform ? "transform" : "fixed",
+    });
+
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.refresh();
+
+    document.querySelectorAll("a[data-scroll-to]").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("data-scroll-to");
+            const currentPath = window.location.pathname;
+
+            if (currentPath !== "/") {
+                // Redirect to home page and scroll to the target section after loading
+                window.location.href = `/#${targetId}`;
+            } else {
+                // Scroll smoothly to the target section
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    // Calculate the offset to center the element
+                    const targetPosition = targetSection.getBoundingClientRect().top;
+                    const scrollContainerPosition = scrollContainer.getBoundingClientRect().top;
+                    const offset = targetPosition - scrollContainerPosition - (window.innerHeight / 2 - targetSection.offsetHeight / 2);
+
+                    locoScroll.scrollTo(offset);
+                }
+            }
         });
     });
+
+    // Handle deep linking when arriving on the home page with a hash
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            locoScroll.scrollTo(targetSection);
+        }
+    }
 });

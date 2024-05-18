@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: "Times New Roman", Times, serif;
     background-color: #f9f9f9;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -101,6 +102,24 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border-bottom: 1px solid #ddd;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right a {
+    margin-left: 20px;
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
 }
 
 .company-name {
@@ -389,7 +408,7 @@ h2 {
     align-items: center;
     padding: 20px;
     background-color: #e9ecef;
-    margin-top:60px;
+    margin-top: 100px;
 }
 
 .page {
@@ -446,7 +465,6 @@ h2 {
     background-color: #e9ecef;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .page {
         flex-direction: column;
@@ -471,4 +489,9 @@ h2 {
     .styled-link {
         font-size: 1rem;
     }
+
+    .company-subheading {
+        font-size: 1.5rem;
+    }
 }
+

@@ -23,7 +23,7 @@
 .warren-img{
     width: 50%;
     height: 100vh;
-    background-image: url("../../public/images/warren.avif");
+    background-image: url("../../public/images/warren.png");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: contain; /* Resize the background image to cover the entire container */

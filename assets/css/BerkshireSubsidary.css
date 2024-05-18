@@ -1,0 +1,32 @@
+p {
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #4a6aba;
+}
+
+a:hover {
+    color: #3050a1;
+    text-decoration: underline;
+}
+
+.main-sublinks {
+    margin-top: 150px;
+}
+
+table span {
+    rotate: 45deg;
+    border-radius: 50%;
+    background-color: #111;
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 25px;
+    opacity: 0;
+    display: none;
+}

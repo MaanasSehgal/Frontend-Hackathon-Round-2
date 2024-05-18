@@ -6,7 +6,7 @@
         <title>berkshirehathaway</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
         <link rel="stylesheet" href="../css/LetterFromWarren.css" />
-        <link rel="stylesheet" href="../css/TermsOfUse.css" />
+        <link rel="stylesheet" href="../css/WarrensLetter.css" />
         <link rel="stylesheet" href="../css/index.css" />
         <link
             rel="stylesheet"
@@ -20,43 +20,46 @@
         <div class="load-container">
             <div class="loading-screen"></div>
         </div>
-        >
         <div id="nav">
-            <a href="/" class="company-name">BERKSHIRE HATHAWAY INC.</a>
-            <h2 class="company-name">3555 Farnam Street Omaha, NE 68131</h2>
+            <a href="/" class=".company-name">BERKSHIRE HATHAWAY INC.</a>
+            <h2 class=".company-name">3555 Farnam Street Omaha, NE 68131</h2>
         </div>
         <div class="cursor-outline">
             <div class="cursor-dot"></div>
         </div>
 
         <div id="scroll-container" data-barba="container" data-barba-namespace="home-section">
-            <header>
-                <h1>Terms of Use</h1>
-            </header>
-            <main class="terms-main">
-                <section>
-                    <h2>Introduction</h2>
-                    <p>Welcome to the Berkshire Hathaway Inc. website. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions of use.</p>
-                </section>
-                <section>
-                    <h2>Use of the Site</h2>
-                    <p>You may use this site for lawful purposes only. You must not use this site in any way that breaches any applicable local, national, or international law or regulation.</p>
-                </section>
-                <section>
-                    <h2>Intellectual Property</h2>
-                    <p>
-                        All content included on this site, such as text, graphics, logos, images, and software, is the property of Berkshire Hathaway Inc. or its content suppliers and is protected by
-                        intellectual property laws.
-                    </p>
-                </section>
-                <section>
-                    <h2>Disclaimer</h2>
-                    <p>
-                        This site and its content are provided "as is" without any warranties of any kind. Berkshire Hathaway Inc. does not warrant that the site will be available at all times or that
-                        the content is accurate or complete.
-                    </p>
-                </section>
-            </main>
+            <div class="max-width-container">
+                <div class="content-container">
+                    <div class="dropdown-box">
+                        <h3>Select Year to Download Shareholder Letter</h3>
+                        <select id="year-select">
+                            <option value="">Select Year</option>
+                            <script>
+                                const yearSelect = document.getElementById("year-select");
+                                for (let year = 2024; year >= 1995; year--) {
+                                    const option = document.createElement("option");
+                                    option.value = year;
+                                    option.textContent = year;
+                                    yearSelect.appendChild(option);
+                                }
+                            </script>
+                        </select>
+                        <button class="download-button">Download Letter</button>
+                    </div>
+
+                    <div class="info-box">
+                        <p>
+                            For shareholders and others who are interested, a book that compiles the full unedited versions of each of Warren Buffett’s letters to shareholders between 1965 and 2014 is
+                            available for sale at this
+                            <a
+                                href="https://www.amazon.com/Berkshire-Hathaway-Letters-Shareholders-Buffett/dp/0615975070/ref=sr_1_fkmr0_1?s=books&ie=UTF8&qid=1511796222&sr=1-1-fkmr0&keywords=berkshire+hathaway+letters+to+shareholders%2C+2014"
+                                >link</a
+                            >.
+                        </p>
+                    </div>
+                </div>
+            </div>
             <footer class="footer">
                 <div class="container">
                     <div class="footer-left">
@@ -68,7 +71,7 @@
                         <p><a href="https://www.berkshirehathaway.com/privacy.html">Privacy Policy</a> | <a href="https://www.berkshirehathaway.com/terms.html">Terms of Use</a></p>
                     </div>
                 </div>
-                <div class="copyright-div">© 1978-2024 Berkshire Hathaway Inc.</div>
+                <div class="copyright-div">© 1978-2024 Berkshire Hathqaway Inc.</div>
             </footer>
         </div>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

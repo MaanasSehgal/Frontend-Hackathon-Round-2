@@ -1,3 +1,101 @@
+function delay(n) {
+    n = n || 2000;
+    return new Promise((done) => {
+        setTimeout(() => {
+            done();
+        }, n);
+    });
+}
+
+function pageTransition() {
+    var tl = gsap.timeline();
+    tl.set(".active-home", {
+        display: "none",
+    });
+
+    tl.to(".loading-screen", {
+        duration: 0.5,
+        bottom: "15vh",
+        ease: "Power4.easeIn",
+        // markers: true,
+    });
+
+    tl.to(".loading-screen", {
+        duration: 1,
+        // height: "100vh",
+        bottom: "200vh",
+        borderRadius: "50%",
+        ease: "Power4.easeIn",
+        delay: 0.1,
+    });
+
+    // tl.to(".loading-screen", {
+    //   duration: 1,
+    //   height: "100%",
+    //   bottom: "100%",
+    //   ease: "Expo.easeInOut",
+    //   // delay: 0.3,
+    // });
+    tl.set(".loading-screen", {
+        bottom: "-100vh",
+        borderRadius: "50%",
+    });
+}
+
+function contentAnimation() {
+    var tl = gsap.timeline();
+    tl.from(".animate-this", {duration: 0.5, y: 5, opacity: 0, stagger: 0.4, delay: 0.2});
+}
+
+barba.hooks.beforeEnter((data) => {
+    // JS functions here
+    const newScript = document.createElement("script");
+    newScript.src = "../js/scroll.js";
+    newScript.async = true;
+    document.head.append(newScript);
+
+    let namespace = data.next.namespace;
+    console.log(href);
+    switch (namespace) {
+        case "Diversity":
+        case "privacy-policy":
+            const newStyle = document.createElement("link");
+            newStyle.setAttribute("rel", "stylesheet");
+            newStyle.setAttribute("href", "../css/Privacy.css");
+            newScript.async = true;
+            document.head.append(newStyle);
+            break;
+    }
+});
+
+$(function () {
+    barba.init({
+        sync: true,
+
+        transitions: [
+            {
+                async leave(data) {
+                    const done = this.async();
+                    pageTransition();
+                    await delay(1000);
+                    done();
+                },
+
+                async enter(data) {
+                    // gsap.timeline().set(".active", {
+                    //   display: "block",
+                    // })
+                    contentAnimation();
+                },
+
+                async once(data) {
+                    contentAnimation();
+                },
+            },
+        ],
+    });
+});
+
 const cursorDot = document.querySelector(".cursor-dot");
 const cursorOutline = document.querySelector(".cursor-outline");
 window.addEventListener("mousemove", function (e) {
@@ -32,16 +130,6 @@ function fetchNews(year) {
         newsContainer.appendChild(newsItem);
     });
 }
-
-const carousel = document.querySelector(".carousel");
-let currentIndex = 0;
-const totalItems = carousel.children.length;
-const itemWidth = carousel.offsetWidth;
-
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalItems;
-    carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-}, 3000);
 
 // Function to redirect to the selected year's news page
 function redirectToYear() {

@@ -15,17 +15,21 @@
             referrerpolicy="no-referrer"
         />
     </head>
-    <body>
+    <body data-barba="wrapper">
+        <div class="load-container">
+            <div class="loading-screen"></div>
+        </div>
+
         <div class="cursor-outline">
             <div class="cursor-dot"></div>
         </div>
 
         <div id="nav">
-            <a href="/" class=".company-name">BERKSHIRE HATHAWAY INC.</a>
+            <a href="/" class="company-name"><span class="design">B</span>ERKSHIRE<span class="design"> H</span>ATHAWAY <span class="design2"> INC.</span></a>
             <h2 class=".company-name">3555 Farnam Street Omaha, NE 68131</h2>
         </div>
 
-        <div id="scroll-container">
+        <div id="scroll-container" data-barba="container" data-barba-namespace="home-section">
             <div class="hero">
                 <div class="link-container">
                     <div class="link-column">
@@ -39,8 +43,8 @@
                         >
                         <a href="./assets/pages/SpecialLetter.html" class="styled-link">Special Letters from Warren & Charlie RE: Past, Present and Future</a>
                         <a href="./assets/pages/BerkshireSubsidary.html" class="styled-link">Links to Berkshire Subsidiary Companies</a>
-                        <a href="https://example.com" class="styled-link">Charlie Munger's Letters to Wesco Shareholders</a>
-                        <a href="https://example.com" class="styled-link">Warren Buffett's Letters to Berkshire Shareholders</a>
+                        <a href="./assets/pages/CharlieMungero.html" class="styled-link">Charlie Munger's Letters to Wesco Shareholders</a>
+                        <a href="./assets/pages/WarrensLetters.html" class="styled-link">Warren Buffett's Letters to Berkshire Shareholders</a>
                     </div>
                     <div class="link-column">
                         <br />
@@ -88,7 +92,10 @@
             referrerpolicy="no-referrer"
         ></script> -->
         <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://unpkg.com/@barba/core"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
         <script src="./assets/js/scroll.js"></script>
         <script src="./assets/js/index.js"></script>
     </body>

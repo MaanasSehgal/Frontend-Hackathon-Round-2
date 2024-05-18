@@ -8,13 +8,16 @@
         <link rel="stylesheet" href="../../css/index.css" />
         <!-- <link rel="stylesheet" href="../../css/news.css" /> -->
     </head>
-    <body>
+    <body data-barba="wrapper">
+        <div class="load-container">
+            <div class="loading-screen"></div>
+        </div>
         <div id="nav">
-            <a href="/" class=".company-name">BERKSHIRE HATHAWAY INC.</a>
+            <a href="/" class="company-name"><span class="design">B</span>ERKSHIRE<span class="design"> H</span>ATHAWAY <span class="design2"> INC.</span></a>
             <h2 class=".company-name">3555 Farnam Street Omaha, NE 68131</h2>
         </div>
 
-        <div id="scroll-container">
+        <div id="scroll-container" data-barba="container" data-barba-namespace="home-section">
             <div class="max-width-container">
                 <div class="news-container">
                     <div id="year-selector">
@@ -68,6 +71,9 @@
                 </footer>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://unpkg.com/@barba/core"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
         <script src="../../js/index.js"></script>
         <script src="../../js/scroll.js"></script>

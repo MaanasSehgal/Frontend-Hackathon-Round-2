@@ -1,0 +1,35 @@
+#nav {
+    margin-bottom: 20px;
+}
+
+#main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    width: 69%;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message p {
+    margin: 0;
+}
+
+.message a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}

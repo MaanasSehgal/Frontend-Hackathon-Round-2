@@ -15,18 +15,38 @@
 
 .letter-container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 3rem 0;
 }
 
-.warren-img{
+.warren-img {
     width: 50%;
     height: 100vh;
     background-image: url("../../public/images/warren.png");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: contain; /* Resize the background image to cover the entire container */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 768px) {
+    .letter-container {
+        flex-direction: column;
+    }
+    .message {
+        width: 80%;
+        margin-top: 4rem;
+    }
+
+    .warren-img {
+        width: 0;
+        height: 0;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
 }
 
 .message p {

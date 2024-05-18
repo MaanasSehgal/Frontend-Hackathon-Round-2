@@ -1,0 +1,25 @@
+header {
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.terms-main {
+    padding: 20px;
+    margin: 8rem auto;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+}

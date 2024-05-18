@@ -16,6 +16,16 @@ function fetchNews(year) {
     });
 }
 
+const carousel = document.querySelector(".carousel");
+let currentIndex = 0;
+const totalItems = carousel.children.length;
+const itemWidth = carousel.offsetWidth;
+
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalItems;
+    carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}, 3000);
+
 // Function to redirect to the selected year's news page
 function redirectToYear() {
     const yearSelector = document.getElementById("year-dropdown");

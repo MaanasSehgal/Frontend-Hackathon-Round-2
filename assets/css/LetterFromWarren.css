@@ -2,22 +2,31 @@
     margin-bottom: 20px;
 }
 
-#scroll-container {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .message {
+    width: 50%;
     margin-top: 8rem;
-    width: 69%;
     margin-bottom: 20px;
     line-height: 1.5;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.letter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.warren-img{
+    width: 50%;
+    height: 100vh;
+    background-image: url("../../public/images/warren.avif");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; /* Resize the background image to cover the entire container */
 }
 
 .message p {

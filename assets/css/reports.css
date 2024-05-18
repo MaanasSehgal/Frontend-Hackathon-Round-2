@@ -4,6 +4,11 @@ table {
     margin: 0 auto;
 }
 
+.report-page {
+    width: 70%;
+    margin: auto;
+}
+
 tr,
 th,
 td {
@@ -36,6 +41,8 @@ tr:nth-child(even) {
 }
 
 .berkshire-click-here {
+    width: 50%;
+    margin: auto;
     border: 2px solid black;
     padding: 10px;
     border-radius: 20px;

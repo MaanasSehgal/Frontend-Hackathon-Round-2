@@ -3,22 +3,37 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>berkshirehathaway</title>
+        <title>Legal Disclaimer - Berkshire Hathaway Inc.</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
-        <link rel="stylesheet" href="../css/LetterFromWarren.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
         <link rel="stylesheet" href="../css/index.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
+        <style>
+            body {
+                font-family: "Montserrat", sans-serif;
+                margin: 0;
+                padding: 0;
+                color: #333;
+            }
+
+            #scroll-container {
+                padding: 50px 20px;
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: justify;
+            }
+
+            h1 {
+                font-size: 32px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .legal-disclaimer p {
+                margin-bottom: 15px;
+            }
+        </style>
     </head>
-    <body data-barba="wrapper">
-        <div class="load-container">
-            <div class="loading-screen"></div>
-        </div>
+    <body>
         <div id="nav">
             <div>
                 <a href="/" class="company-name"><span class="design">B</span>ERKSHIRE<span class="design"> H</span>ATHAWAY <span class="design2"> INC.</span></a>
@@ -31,38 +46,22 @@
                 <a href="/">Miscellaneous</a>
             </div>
         </div>
-        <div class="cursor-outline">
-            <div class="cursor-dot"></div>
-        </div>
 
-        <div id="scroll-container" data-barba="container" data-barba-namespace="home-section">
-            <div class="letter-container">
-                <div class="message">
-                    <p>Dear Reader,</p>
-                    <p>
-                        You probably know that I don't make stock recommendations. However, I have two thoughts regarding your personal expenditures that can save you real money. I'm suggesting that
-                        you call on the services of two subsidiaries of Berkshire: GEICO and Borsheim's.
-                    </p>
-                    <p>
-                        I estimate that about 40% of all auto drivers in the country can save money by insuring with GEICO. The figure is not 100% because insurers differ in their underwriting
-                        judgments, with some favoring drivers who live in certain geographical areas and work in certain occupations more than GEICO does. I believe, however, that GEICO more
-                        frequently offers the low price than does any other national carrier selling insurance to all comers. You can quickly find out whether you can save money by going to
-                        <a href="https://www.geico.com" target="_blank">www.geico.com</a> or by calling 800-555-2756.
-                    </p>
-                    <p>
-                        Fine jewelry, watches and giftware will almost certainly cost you less at Borsheim's. I've looked at the figures for all publicly-owned jewelry companies and the contrast with
-                        Borsheim's is startling. Our one-store operation, with its huge volume, enables us to operate with costs that are fully 15-20 percentage points below those incurred by our
-                        competitors. We pass the benefits of this low-cost structure along to our customers.
-                    </p>
-                    <p>
-                        Every year Borsheim's sends out thousands of selections to customers who want a long-distance opportunity to inspect what it offers and decide which, if any, item they'd like
-                        to purchase. We do a huge amount of business in this low-key way, which allows the shopper to conveniently see the exceptional values that we offer. Call Sean Moore or Karen
-                        Goracke at <a href="https://www.borsheims.com/">Borsheim's</a> (800-642-4438) and save substantial money on your next purchase of jewelry.
-                    </p>
-                    <p>Sincerely,</p>
-                    <p>Warren E. Buffett</p>
-                </div>
-                <div class="warren-img"></div>
+        <div id="scroll-container">
+            <div class="legal-disclaimer">
+                <h1>Legal Disclaimer</h1>
+                <p>This website has been prepared solely for the purpose of providing information about Berkshire Hathaway Inc. and the services and products it offers.</p>
+                <p>No representation is made as to the completeness or accuracy of the information it contains.</p>
+                <p>This information may be incomplete, may contain errors or may have become out of date.</p>
+                <p>
+                    The reports filed by Berkshire with the Securities and Exchange Commission and listed on this website speak only as of the respective dates on which they are filed or used by
+                    Berkshire.
+                </p>
+                <p>Berkshire makes no commitment, and disclaims any duty, to update any of those reports.</p>
+                <p>Berkshire reserves the right to add, modify or delete any information at this website at any time.</p>
+                <p>This publication and any references to products or services are provided "as is" without any warranty or implied term of any kind.</p>
+                <p>Reproduction or distribution of any materials obtained on this website or linking to this website without written permission is prohibited.</p>
+                <p>All rights reserved.</p>
             </div>
 
             <footer class="footer">
@@ -79,6 +78,7 @@
                 <div class="copyright-div">© 1978-2024 Berkshire Hathaway Inc.</div>
             </footer>
         </div>
+
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://unpkg.com/@barba/core"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>

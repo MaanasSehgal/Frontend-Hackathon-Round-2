@@ -664,14 +664,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const currentPath = window.location.pathname;
 
             if (currentPath !== "/") {
-                // Redirect to home page and scroll to the target section after loading
                 window.location.href = `/#${targetId}`;
             } else {
-                // Scroll smoothly to the target section
                 const targetSection = document.getElementById(targetId);
 
                 if (targetSection) {
-                    // Calculate the offset to center the element
                     const targetPosition = targetSection.getBoundingClientRect().top;
                     const scrollContainerPosition = scrollContainer.getBoundingClientRect().top;
                     const offset = targetPosition - scrollContainerPosition - (window.innerHeight / 2 - targetSection.offsetHeight / 2);

@@ -47,26 +47,26 @@ function contentAnimation() {
     tl.from(".animate-this", {duration: 0.5, y: 5, opacity: 0, stagger: 0.4, delay: 0.2});
 }
 
-barba.hooks.beforeEnter((data) => {
-    // JS functions here
-    const newScript = document.createElement("script");
-    newScript.src = "../js/scroll.js";
-    newScript.async = true;
-    document.head.append(newScript);
+// barba.hooks.beforeEnter((data) => {
+//     // JS functions here
+//     const newScript = document.createElement("script");
+//     newScript.src = "../js/scroll.js";
+//     newScript.async = true;
+//     document.head.append(newScript);
 
-    let namespace = data.next.namespace;
-    console.log(href);
-    switch (namespace) {
-        case "Diversity":
-        case "privacy-policy":
-            const newStyle = document.createElement("link");
-            newStyle.setAttribute("rel", "stylesheet");
-            newStyle.setAttribute("href", "../css/Privacy.css");
-            newScript.async = true;
-            document.head.append(newStyle);
-            break;
-    }
-});
+//     let namespace = data.next.namespace;
+//     console.log(href);
+//     switch (namespace) {
+//         case "Diversity":
+//         case "privacy-policy":
+//             const newStyle = document.createElement("link");
+//             newStyle.setAttribute("rel", "stylesheet");
+//             newStyle.setAttribute("href", "../css/Privacy.css");
+//             newScript.async = true;
+//             document.head.append(newStyle);
+//             break;
+//     }
+// });
 
 $(function () {
     barba.init({
@@ -74,7 +74,7 @@ $(function () {
 
         transitions: [
             {
-                async leave(data) {
+                async beforeLeave(data) {
                     const done = this.async();
                     pageTransition();
                     await delay(1000);
@@ -82,14 +82,16 @@ $(function () {
                 },
 
                 async enter(data) {
+                    await delay(200);
+                    location.reload();
                     // gsap.timeline().set(".active", {
                     //   display: "block",
                     // })
-                    contentAnimation();
+                    // contentAnimation();
                 },
 
                 async once(data) {
-                    contentAnimation();
+                    // contentAnimation();
                 },
             },
         ],

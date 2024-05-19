@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Times New Roman", Times, serif;
-    background-color: #f9f9f9;
     scroll-behavior: smooth;
 }
 
@@ -27,6 +26,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: "Montserrat", sans-serif;
+    background-color: rgb(249, 249, 249);
 }
 
 .loading-screen {
@@ -446,6 +446,11 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.page:hover {
+    transform: scale(1.02);
 }
 
 .category {

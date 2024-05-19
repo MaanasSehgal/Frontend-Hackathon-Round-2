@@ -335,8 +335,8 @@ h2 {
 .card {
     width: 300px;
     height: 300px;
-    margin: 20px 30px;
-    margin-bottom: 100px;
+    margin: 0px 30px;
+    margin-bottom: 80px;
     border-radius: 30px;
     border: 2px solid rgba(0, 0, 0, 0.2);
 }
@@ -407,29 +407,6 @@ h2 {
     margin: 0 auto;
 }
 
-/* Cursor */
-.cursor-dot {
-    width: 2px;
-    height: 2px;
-    background-color: black;
-}
-
-.cursor-outline {
-    width: 20px;
-    height: 20px;
-    border: 2px solid hsla(0, 0%, 0%, 0.7);
-}
-.cursor-dot,
-.cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 1200;
-    pointer-events: none;
-}
-
 .hero {
     display: flex;
     flex-direction: column;
@@ -453,25 +430,40 @@ h2 {
     overflow: hidden;
 }
 
+.page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px 0;
+    display: flex;
+    background: #ccadad;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .category {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
     padding: 20px;
-    background-color: #4e73df;
+    background: linear-gradient(to bottom, #6a8efb, #2a54d1);
     color: #fff;
     font-family: "Montserrat", sans-serif;
-    flex: 1;
+    width: 30%;
     text-align: center;
     font-size: 2.5rem;
-    margin-right: 20px;
-    min-height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .links {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
     padding: 20px;
-    flex: 2;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

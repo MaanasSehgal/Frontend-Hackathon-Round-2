@@ -13,6 +13,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.message p, .message a {
+    font-size: 1.3rem;
+}
+
 .letter-container {
     display: flex;
     flex-direction: row;

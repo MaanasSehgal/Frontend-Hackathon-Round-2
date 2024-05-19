@@ -134,7 +134,7 @@ gsap.from(".styled-link", {
     opacity: 0,
     y: 50,
     duration: 1,
-    stagger: 0.3,
+    stagger: 0.2,
     scrollTrigger: {
         trigger: ".links",
         start: "top 80%",

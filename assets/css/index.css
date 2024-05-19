@@ -133,6 +133,19 @@ h2 {
     z-index: 2;
 }
 
+@media (max-width: 300px) {
+    .company-name {
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+    .design {
+        font-size: 1.5rem;
+    }
+    .design2 {
+        font-size: 0.9rem;
+    }
+}
+
 .sub-title {
     font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;

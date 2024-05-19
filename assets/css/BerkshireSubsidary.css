@@ -30,3 +30,22 @@ table span {
     opacity: 0;
     display: none;
 }
+
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 1rem;
+        margin: 10px;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+
+    .main-sublinks {
+        margin-top: 100px;
+    }
+
+    table span {
+        font-size: 20px;
+        margin-left: 10px;
+        padding: 3px;
+    }
+}

@@ -284,27 +284,30 @@ h2 {
     color: #999;
 }
 
-
-
 /* Hide the icon for screens larger than 720px */
 @media screen and (min-width: 720px) {
     .hidden {
-      display: none;
+        display: none;
     }
-  }
-  
-  /* Ensure the icon is visible for screens smaller than 720px */
-  @media screen and (max-width: 719px) {
+}
+
+/* Ensure the icon is visible for screens smaller than 720px */
+@media screen and (max-width: 719px) {
     .hidden {
-      display: block;
+        display: block;
     }
-  }
+}
 
 /* Media Queries for Footer Responsiveness */
 @media (max-width: 600px) {
     .nav-right {
         display: none;
     }
+
+    #nav {
+        justify-content: center;
+    }
+
     .footer .container {
         flex-direction: column;
         text-align: center;
@@ -362,7 +365,7 @@ h2 {
 
 .information-div {
     margin-top: 50px;
-    text-align: center;
+    text-align: justify;
     font-family: "Times New Roman", Times, serif;
     font-size: 2rem;
 }

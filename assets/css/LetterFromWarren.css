@@ -36,7 +36,8 @@
     }
     .message {
         width: 80%;
-        margin-top: 4rem;
+        margin-top: 8rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
     }
 
     .warren-img {

@@ -98,6 +98,7 @@ $(function () {
 
 const cursorDot = document.querySelector(".cursor-dot");
 const cursorOutline = document.querySelector(".cursor-outline");
+
 window.addEventListener("mousemove", function (e) {
     const posX = e.clientX;
     const posY = e.clientY;

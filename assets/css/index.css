@@ -464,6 +464,7 @@ h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-right: 20px;
+    min-height: 10rem;
 }
 
 .links {

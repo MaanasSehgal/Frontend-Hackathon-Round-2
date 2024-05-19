@@ -171,8 +171,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetId = this.getAttribute("data-scroll-to");
             const currentPath = window.location.pathname;
 
-            if (currentPath !== "/") {
-                window.location.href = `/#${targetId}`;
+            if (currentPath !== "/Frontend-Hackathon-Round-2/") {
+                window.location.href = `/Frontend-Hackathon-Round-2/#${targetId}`;
             } else {
                 const targetSection = document.getElementById(targetId);
 
